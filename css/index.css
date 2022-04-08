@@ -1,0 +1,119 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  background-color: #f4abc4;
+  height: 100vh;
+  padding-bottom: 30px;
+  overflow: auto;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* title */
+.main .title {
+  background-color: #595b83;
+  height: 110px;
+  width: 700px;
+
+  margin: 50px 0 0 0;
+}
+
+.main .title h1 {
+  text-align: center;
+  font-family: arial;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin: 10px 0 10px 0;
+}
+
+/* content */
+
+.main .content {
+  width: 700px;
+  height: 472px;
+  background-color: #595b83;
+  margin: 30px 0 0 0;
+  padding-top: 20px;
+  overflow: auto;
+}
+
+.main .content form table {
+  width: 80%;
+  margin-left: 65px;
+}
+
+.main .content form table,
+td,
+th {
+  text-align: center;
+
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.main .content form table tbody tr td .delete {
+  cursor: pointer;
+
+  height: 32px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  background-color: #060930;
+  color: white;
+}
+
+/* write */
+.main .write .add {
+  height: 50px;
+  width: 670px;
+  border-radius: 50px;
+  border: none;
+
+  font-size: large;
+  font-family: Arial;
+  font-weight: bold;
+  color: white;
+  background-color: #595b83;
+
+  margin: 30px 0 0 0;
+  padding: 0 20px 0 20px;
+}
+
+.main .write .add:focus {
+  outline: solid white 3px;
+}
+
+.main .write {
+  position: relative;
+}
+
+.main .write .circle {
+  background-color: #060930;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.main .write form .circle {
+  color: white;
+  font-size: small;
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+
+  border: none;
+}
