@@ -20,27 +20,25 @@
     </div>
 
     <div class="content">
-      <form action="#" method="post" class="table-container">
-        <table>
-          <tr>
-            <th>NO.</th>
-            <th>TASK</th>
-            <th>ACTIONS</th>
-          </tr>
-          <?php while($results = mysqli_fetch_array($sqlAccounts)) { ?>
-          <tr>
-            <td><?php echo $results['id'] ?> </td>
-            <td><?php echo $results['task'] ?></td>
-            <td>
-              <form action="/todo-list-php/php/delete.php" method="post" class="delete-btn">
-                <input type="submit" value="DELETE" class="delete" name="delete">
-                <input type="hidden" name="deleteId" value="<?php echo $results['id'] ?> ">
-              </form>
-            </td>
-          </tr>
-          <?php } ?>
-        </table>
-      </form>
+      <table class="table-container">
+        <tr>
+          <th>NO.</th>
+          <th>TASK</th>
+          <th>ACTIONS</th>
+        </tr>
+        <?php while($results = mysqli_fetch_array($sqlAccounts)) { ?>
+        <tr>
+          <td><?php echo $results['id'] ?> </td>
+          <td><?php echo $results['task'] ?></td>
+          <td>
+            <form action="/todo-list-php/php/delete.php" method="post" class="delete-btn">
+              <input type="hidden" name="deleteId" value="<?php echo $results['id'] ?> ">
+              <input type="submit" value="DELETE" class="delete" name="delete">
+            </form>
+          </td>
+        </tr>
+        <?php } ?>
+      </table>
     </div>
 
     <div class="write">
